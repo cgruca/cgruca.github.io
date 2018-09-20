@@ -129,7 +129,7 @@ Technical Report
 
 
 <h2>Password Protection</h2>
-<p>Password protecting my webpage was a bit tricky as the website host I'm using does not support htaccess which is the most commonly used method. Since github pages only supports static pages I found a solution online that encrypts the whole html file, the browser then decrypts it using the password provided. This method is not the sturdiest of methods but I'm sure it'll be fine for the purposes of this course.</p>
+<p>Password protecting my webpage was a bit tricky as the website host I'm using does not support htaccess which is one of the most commonly used methods. Github pages only supports static pages, so I found a solution online called StatiCrypt. This program, based on a crypto-js library, encrypts the whole html file using AES-256. The password protected page is then decrypted in-browser, using the password provided. This method is not the sturdiest of methods but it should be fine for the purposes of this course.</p>
 
 <h2>New Tag Used</h2>
 <p>The new tag that I used for this 1st lab was the button tag. It simply creates an html button on the web page, that offers the user a way to directly interact with the website. When the button is clicked on my homepage, a broswer alert pops up and notifies the user that the button was clicked.</p>
