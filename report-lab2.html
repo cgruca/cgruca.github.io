@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta 	http-equiv="Content-type"
+	content="text/html; charset=utf-8" />
+<title>My first web page</title>
+
+<style>
+
+
+li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 20px 22px;
+	  text-decoration: none;
+		font-family: "Verdana", Geneva, sans-serif;
+		font-size: 1.3em;
+	}
+
+li a:hover:not(.active) {
+	    background-color: #111;
+	}
+
+</style>
+</head>
+
+<body style="width: 100%; height: 100vh; margin: 0px; background-image: linear-gradient(#fff, #ddd); background-repeat: no-repeat; background-attachment: fixed;">
+
+<div class="titlebox">
+<h1 class="title">
+Chris's CPS 530 Website
+</h1>
+</div>
+
+
+
+<ul class="nav-bar">
+  <li class="nav-items"><a href="https://cgruca.github.io/home.html">Home</a></li>
+  <li class="nav-items"><a href="https://cgruca.github.io/validation.html">Validation Reports</a></li>
+  <li class="active"><a href="https://cgruca.github.io/report.html">Technical Reports</a></li>
+</ul>
+
+
+<div class="card">
+<h1 style="font-size: 2.5em; font-family: charcoal, sans-serif;" >Lab 2 Technical Report</h1>
+<hr>
+
+<h2>Element Classes</h2>
+<p>I used two element css tags. They are; div.card, which has styling to create a modern card design on top of the background, as well as h1.title to create a different and unique title at the top of the page.</p>
+
+<h2>Global CSS Classes</h2>
+<p>I used several global css tags. The main ones are related to the nav bar at the top of the page. These classes include; .active which is used to change the color of the menu item at the top, as well as .nav-bar & .nav-items which include several styles to transform content into a navigational menu style.</p>
+
+<h2>HTML 5-only Tags</h2>
+<p>The two HTML 5 tags I used are the details and progress tags. Both can be found on the homepage.</p>
+
+<h2>CSS3-only Features</h2>
+<p>The two CSS3 only features that I used include; the linear gradient function in background-image and the box-shadow style. Both of these are used in the background on this page.</p>
+
+<h2>Password Protection</h2>
+<p>The password protection method I used is the same as in lab 1. I found a solution online called StatiCrypt which works with githubs static page setup. This program, based on a crypto-js library, encrypts the whole html file using AES-256. The password protected page is then decrypted in-browser, using the password provided.</p>
+
+<h2>Time Spent</h2>
+<p>I spent roughly 4 hours working on this lab.</p>
+
+
+
+<p style="text-align:center; margin-top:60px">
+	<img src="https://img.clipartxtras.com/3c156b00aedb8729222dab71ea14f019_black-and-white-swirl-clipart-clipground-swirl-clipart-black-and-white_1811-469.png" alt="Black Swirl" style="width:40%">
+</p>
+
+</div>
+
+</body>
+
+</html>
