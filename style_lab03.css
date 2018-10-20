@@ -1,0 +1,140 @@
+html {
+  font-size: large;
+  box-sizing: border-box;
+}
+.page {
+  background-image: linear-gradient(#ccc, #888);
+}
+
+.space {
+  padding-top: 60px;
+  padding-bottom: 60px
+}
+
+.titlebox {
+  box-sizing: content-box;
+  height: 160px;
+  background: #fff;
+  width: 100%;
+  border-bottom: 30px solid #777;
+
+}
+
+h1.title {
+  color: black;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 3em;
+  padding: 15px;
+}
+
+.center {
+  text-align: center;
+}
+
+.top1 {
+  background: #fafafa;
+  box-shadow: -3px 3px 10px 1px #777;
+  padding: 20px;
+  margin-left: 0%;
+  margin-right: 40%;
+}
+
+
+.flex-parent {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background: #f5f5f5;
+  box-shadow: -3px 3px 10px 1px #777;
+  margin-left: 40%;
+  margin-right: 0%;
+
+}
+
+.flex-child1 {
+  flex: 2 1 0;
+  text-align: center;
+}
+.flex-child2 {
+  flex: 1 1 0;
+  text-align: center;
+}
+.flex-child3 {
+  flex: 2 1 0;
+  text-align: center;
+}
+
+.links {
+  display: inline-block;
+  top: 10%;
+  left: 50%;
+  width: 700px;
+}
+
+.link-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 20px;
+}
+
+.btn-info {
+  background-color: #333;
+  border-color: #000;
+  border: 1px solid #ccc;
+}
+
+.btn-info:hover {
+  background-color: #ccc;
+  border-color: #000;
+  border: 1px solid #000;
+}
+
+
+.middle_btn {
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 3/3;
+}
+
+.top3 {
+  text-align: left;
+  background: #f0f0f0;
+  padding: 80px;
+  box-shadow: -3px 3px 10px 1px #777;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.top4 {
+  background: #e6e6e6;
+  padding: 40px;
+  text-align: left;
+  box-shadow: -3px 3px 10px 1px #666;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.top5 {
+  background: #dfdfdf;
+  padding: 80px;
+  box-shadow: -3px 3px 10px 1px #777;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+
+
+h3, b, span {
+  color: black;
+  font-family: "Arial Black", sans-serif;
+  font-size: 2em;
+
+}
+
+b.intext {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+}
