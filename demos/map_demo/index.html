@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+	<meta 	http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+	<!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>
+
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"
+  integrity="sha512-YZ6b5bXRVwipfqul5krehD9qlbJzc6KOGXYsDjU9HHXW2gK57xmWl2gU6nAegiErAqFXhygKIsWPKbjLPXVb2g=="
+  crossorigin=""></script>
+
+<!-- Load Esri Leaflet Geocoder from CDN -->
+<link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.css"
+  integrity="sha512-v5YmWLm8KqAAmg5808pETiccEohtt8rPVMGQ1jA6jqkWVydV5Cuz3nJ9fQ7ittSxvuqsvI9RSGfVoKPaAJZ/AQ=="
+  crossorigin="">
+<script src="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.js"
+  integrity="sha512-zdT4Pc2tIrc6uoYly2Wp8jh6EPEWaveqqD3sT0lf5yei19BC1WulGuh5CesB0ldBKZieKGD7Qyf/G0jdSe016A=="
+  crossorigin=""></script>
+
+<title>Responsive Web Design</title>
+
+</head>
+
+<body>
+
+<header>
+<h1 style="background-color:#0f314e; font-size:45px; color: white" class="title">
+Geo Tracer
+</h1>
+
+</header>
+
+<div class="header">
+	<h2>Source Location</h2>
+	<p>This website defaults to using your device's location to set the source. You can enter your own custom source location by using the search bar on the map or clicking somewhere on the map.</p>
+	<br>
+	<p id="geoLocation"></p>
+
+	<br>
+	<h2>Destination</h2>
+	<p>Enter your destination in the field below, or drop a txt file with your coords using this format: 43.65748683,-79.37976122</p>
+		<br>
+		<div class="sameLine">
+		<input type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter latitude'" placeholder="Enter latitude" id="d-lat" class="coord-input">
+		<input type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter longitude'" placeholder="Enter longitude" id="d-long" class="coord-input">
+
+		<div id="holder" >Drop coord file here or click the button below</div>
+		<input type="file" class="inputfile" onchange="showFile()" style="float:right" />
+		<p id="status"></p>
+		<p id="destination"></p>
+
+	</div>
+	<br>
+
+	<h2>Results</h2>
+	<p>This page also uses a web worker to calculate the distance between the source point and destination point using the haversine formula. The page will also convert the coordinate values into a human readable format using reverse geocoding.
+		 Click the calculate distance button to obtain the distance between the two points. </p>
+	<br>
+	<br>
+	<div class="sameLine">
+	<button type="button" onclick="calcDistance()">Calculate the distance</button>
+	</div>
+	<br>
+	<br>
+	<section class="sameLine">
+		<h3 id="location"></h3>
+		<h3 id="calculation"></h3>
+	</section>
+
+<br>
+
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer>Chris Gruca &copy; 2019</footer>
+
+</main>
+
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

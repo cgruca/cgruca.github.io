@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+	<meta 	http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" contnet="width=device-width">
+	<title>Responsive Web Design</title>
+
+</head>
+
+<body>
+
+<header>
+<h1 style="background-color:#fff" class="title">
+Weather Forecaster
+</h1>
+
+<nav class="nav-bar">
+  <li class="nav-items"><a class="nav-bar active" onClick="document.getElementById('current').scrollIntoView();">Current</a> |
+  <li class="nav-items"><a class="nav-bar" onClick="document.getElementById('hourly').scrollIntoView();">Hourly</a> |
+  <li class="nav-items"><a class="nav-bar" onClick="document.getElementById('five-hour').scrollIntoView();">5-Day</a> |
+</nav>
+</header>
+
+<header class="header">
+	<div class="search sameLine">
+		<input type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter City Name'" placeholder="Enter City Name" id="search-txt">
+	</div>
+
+	<div class="toggle sameLine">
+		<p class="sameLine">&#8451;</p>
+		<label class="switch sameLine">
+			<input type="checkbox" id="checkbox">
+			<span class="slider round"></span>
+		</label>
+		<p class="sameLine">&#8457;</p>
+	</div>
+</header>
+
+<div  id="current" class="container">
+
+	<div class="top-bar sameline">
+		<div class="card-type">Current</div>
+		<div name="city-top" class="city-top"></div>
+	</div>
+<main>
+
+<div>
+
+	<div class="c-temperature">
+      <div id="c-temp"></div>
+    </div>
+
+    <div class="c-humidity">
+      <div id="c-humidity-div"></div>
+    </div>
+
+		<div class="c-wind">
+			<div id="c-wind-div"></div>
+		</div>
+
+		<div class="weather-icon">
+      <div class="weather-icon-holder">
+      <img src="" alt="" id="icon">
+			   <div id="info-main"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="hourly" class="container">
+
+	<div class="top-bar sameline">
+		<div class="card-type">Hourly</div>
+		<div name="city-top" class="city-top"></div>
+	</div>
+<main>
+
+<div>
+<div class="horiz-bar">
+
+      <div id="h-temp" class="h-temp-main"></div>
+
+      <div id="h-humidity-div" class="h-humidity-div-main"></div>
+
+			<div id="h-wind-div" class="h-wind-div-main"></div>
+
+			<div class="weather-icon-mini">
+	      <img src="" alt="" id="mini-icon">
+				<div id="info-hourly"></div>
+	    </div>
+</div>
+<div id="graph">
+	<div class="h-vertical-bar1">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon1" class="h-icon">
+			</div>
+
+      <div id="h-temp-1" class="h-temp"></div>
+			<div id="h-humidity-div-1" class="h-wind-div"></div>
+			<div id="h-wind-div-1" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-1" class="h-time"></div>
+	</div>
+
+	<div class="h-vertical-bar2">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon2" class="h-icon">
+			</div>
+
+			<div id="h-temp-2" class="h-temp"></div>
+			<div id="h-humidity-div-2" class="h-wind-div"></div>
+			<div id="h-wind-div-2" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-2" class="h-time"></div>
+	</div>
+
+	<div class="h-vertical-bar3">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon3" class="h-icon">
+			</div>
+
+			<div id="h-temp-3" class="h-temp"></div>
+			<div id="h-humidity-div-3" class="h-wind-div"></div>
+			<div id="h-wind-div-3" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-3" class="h-time"></div>
+	</div>
+
+	<div class="h-vertical-bar4">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon4" class="h-icon">
+			</div>
+
+			<div id="h-temp-4" class="h-temp"></div>
+			<div id="h-humidity-div-4" class="h-wind-div"></div>
+			<div id="h-wind-div-4" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-4" class="h-time"></div>
+	</div>
+
+	<div class="h-vertical-bar5">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon5" class="h-icon">
+			</div>
+
+			<div id="h-temp-5" class="h-temp"></div>
+			<div id="h-humidity-div-5" class="h-wind-div"></div>
+			<div id="h-wind-div-5" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-5" class="h-time"></div>
+	</div>
+
+	<div class="h-vertical-bar6">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon6" class="h-icon">
+			</div>
+
+			<div id="h-temp-6" class="h-temp"></div>
+			<div id="h-humidity-div-6" class="h-wind-div"></div>
+			<div id="h-wind-div-6" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-6" class="h-time"></div>
+	</div>
+
+	<div class="h-vertical-bar7">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon7" class="h-icon">
+			</div>
+
+			<div id="h-temp-7" class="h-temp"></div>
+			<div id="h-humidity-div-7" class="h-wind-div"></div>
+			<div id="h-wind-div-7" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-7" class="h-time"></div>
+	</div>
+
+	<div class="h-vertical-bar8">
+			<div class="weather-icon-vert">
+				<img src="" alt="" id="h-icon8" class="h-icon">
+			</div>
+
+			<div id="h-temp-8" class="h-temp"></div>
+			<div id="h-humidity-div-8" class="h-wind-div"></div>
+			<div id="h-wind-div-8" class="h-wind-div"></div>
+			<br/>
+			<div id="h-time-8" class="h-time"></div>
+	</div>
+</div>
+</div>
+</div>
+
+<div id="five-hour" class="container">
+
+	<div class="top-bar sameline">
+		<div class="card-type">5-Day</div>
+		<div class="city-top"></div>
+	</div>
+<main>
+<div>
+	<div class="vertical-bar1">
+			<div id="weekday1" class="weekday"></div>
+
+			<div class="weather-icon-vert2">
+				<div id="info-5day-1"></div>
+				<img src="" alt="" id="f-icon1" class="h-icon">
+			</div>
+
+      <div id="f-temp-1" class="f-temp"></div>
+			<br/>
+      <div id="f-humidity-div-1" class="f-temp"></div>
+			<br/>
+			<div id="f-wind-div-1" class="f-temp"></div>
+			<br/>
+	</div>
+
+	<div class="vertical-bar2">
+		<div id="weekday2" class="weekday"></div>
+
+		<div class="weather-icon-vert2">
+			<div id="info-5day-2"></div>
+			<img src="" alt="" id="f-icon2" class="h-icon">
+		</div>
+
+		<div id="f-temp-2" class="f-temp"></div>
+		<br/>
+		<div id="f-humidity-div-2" class="f-temp"></div>
+		<br/>
+		<div id="f-wind-div-2" class="f-temp"></div>
+	</div>
+
+	<div class="vertical-bar3">
+			<div id="weekday3" class="weekday"></div>
+
+			<div class="weather-icon-vert2">
+				<div id="info-5day-3"></div>
+				<img src="" alt="" id="f-icon3" class="h-icon">
+			</div>
+
+      <div id="f-temp-3" class="f-temp"></div>
+			<br/>
+      <div id="f-humidity-div-3" class="f-temp"></div>
+			<br/>
+			<div id="f-wind-div-3" class="f-temp"></div>
+	</div>
+
+	<div class="vertical-bar4">
+			<div id="weekday4" class="weekday"></div>
+
+			<div class="weather-icon-vert2">
+				<div id="info-5day-4"></div>
+				<img src="" alt="" id="f-icon4" class="h-icon">
+			</div>
+
+      <div id="f-temp-4" class="f-temp"></div>
+			<br/>
+      <div id="f-humidity-div-4" class="f-temp"></div>
+			<br/>
+			<div id="f-wind-div-4" class="f-temp"></div>
+	</div>
+
+	<div class="vertical-bar5">
+			<div id="weekday5" class="weekday"></div>
+
+			<div class="weather-icon-vert2">
+				<div id="info-5day-5"></div>
+				<img src="" alt="" id="f-icon5" class="h-icon">
+			</div>
+
+      <div id="f-temp-5" class="f-temp"></div>
+			<br/>
+      <div id="f-humidity-div-5" class="f-temp"></div>
+			<br/>
+			<div id="f-wind-div-5" class="f-temp"></div>
+	</div>
+
+</div>
+</div>
+
+
+
+<footer>Chris Gruca &copy; 2019</footer>
+
+</main>
+
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

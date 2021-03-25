@@ -1,105 +1,413 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
 
-<link rel="stylesheet" type="text/css" href="style.css">
-	<meta 	http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+     <!-- Site Metas -->
+    <title>Chris Gruca - Portfolio</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<!-- Load Leaflet from CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-  crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-  crossorigin=""></script>
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
-  <!-- Load Esri Leaflet from CDN -->
-  <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"
-  integrity="sha512-YZ6b5bXRVwipfqul5krehD9qlbJzc6KOGXYsDjU9HHXW2gK57xmWl2gU6nAegiErAqFXhygKIsWPKbjLPXVb2g=="
-  crossorigin=""></script>
-
-<!-- Load Esri Leaflet Geocoder from CDN -->
-<link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.css"
-  integrity="sha512-v5YmWLm8KqAAmg5808pETiccEohtt8rPVMGQ1jA6jqkWVydV5Cuz3nJ9fQ7ittSxvuqsvI9RSGfVoKPaAJZ/AQ=="
-  crossorigin="">
-<script src="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.js"
-  integrity="sha512-zdT4Pc2tIrc6uoYly2Wp8jh6EPEWaveqqD3sT0lf5yei19BC1WulGuh5CesB0ldBKZieKGD7Qyf/G0jdSe016A=="
-  crossorigin=""></script>
-
-<title>Responsive Web Design</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
+<body id="page-top" class="politics_version">
 
-<body>
+    <!-- LOADER -->
+    <div id="preloader">
+        <div id="main-ld">
+			<div id="loader"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
 
-<header>
-<h1 style="background-color:#0f314e; font-size:45px; color: white" class="title">
-Geo Tracer
-</h1>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" src="images/logo_neon.png" alt="" />
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+			      <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-</header>
-
-<div class="header">
-	<h2>Source Location</h2>
-	<p>This website defaults to using your device's location to set the source. You can enter your own custom source location by using the search bar on the map or clicking somewhere on the map.</p>
-	<br>
-	<p id="geoLocation"></p>
-
-	<br>
-	<h2>Destination</h2>
-	<p>Enter your destination in the field below, or drop a txt file with your coords using this format: 43.65748683,-79.37976122</p>
-		<br>
-		<div class="sameLine">
-		<input type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter latitude'" placeholder="Enter latitude" id="d-lat" class="coord-input">
-		<input type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter longitude'" placeholder="Enter longitude" id="d-long" class="coord-input">
-
-		<div id="holder" >Drop coord file here or click the button below</div>
-		<input type="file" class="inputfile" onchange="showFile()" style="float:right" />
-		<p id="status"></p>
-		<p id="destination"></p>
-
-	</div>
-	<br>
-
-	<h2>Results</h2>
-	<p>This page also uses a web worker to calculate the distance between the source point and destination point using the haversine formula. The page will also convert the coordinate values into a human readable format using reverse geocoding.
-		 Click the calculate distance button to obtain the distance between the two points. </p>
-	<br>
-	<br>
-	<div class="sameLine">
-	<button type="button" onclick="calcDistance()">Calculate the distance</button>
-	</div>
-	<br>
-	<br>
-	<section class="sameLine">
-		<h3 id="location"></h3>
-		<h3 id="calculation"></h3>
+	<section id="home" class="main-banner parallaxie" style="background: url('uploads/neon-bg1.jpg')">
+		<div class="heading">
+			<h1>Hey, I'm Chris</h1>
+			<p>"Never let me slip, 'cause if I slip, then I'm slippin'"<br>-Dr. Dre</p>
+			<h3 class="cd-headline clip is-full-width">
+				<span>I do  </span>
+				<span class="cd-words-wrapper">
+					<b class="is-visible">Web Development</b>
+					<b>Video Production</b>
+          <b>App Development</b>
+					<b>Video Editing</b>
+          <b>Graphic Design</b>
+				</span>
+			</h3>
+		</div>
 	</section>
 
-<br>
 
-<div id="map" style="width: 100%; height: 400px;"></div>
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h2>About Me</h2>
+                        <p>Hello there, I'm a Graduate of Ryerson University with a Major in Computer Science. As a big tech guy I've dabbled with loads of programs and applications, ranging from the creative side like the Adobe Suite, to more technical ones like Android Studio. This portfolio site is intended to show off some of the things I've worked on in the past.</p>
+                        <p>Experienced in: Java, JavaScript, Python, HTML, CSS, Android Studio, XCode, Adobe Creative Suite, Microsoft Office, Blender and Unity. For more details check out my CV down below.</p>
+                        <a href="uploads/Resume_2021.pdf" class="sim-btn btn-hover-new" data-text="Download CV" target="_blank"><span>Download CV</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="right-box-pro wow fadeIn">
+                        <img src="uploads/about_04.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div id="services" class="section srvs">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Services</h3>
+                <p>Web/app/game development, video production, graphic design... you name it, I've probably done it.</p>
+            </div><!-- end title -->
+
+            <div class="row">
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-seo"></i>
+						</div>
+						<h2>Web Development</h2>
+						<p>HTML, CSS and JS, the holy trinity of app dev. Whether it's making it from scratch or using a builder, I can help you create your dream website.</p>
+					</div>
+                </div><!-- end col -->
 
 
-</div>
+                <div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-multiscreen"></i>
+						</div>
+						<h2>Responsive Design</h2>
+						<p>Laptops, tablets, smartphones and... fridges? I can help you make your product look consistent across all these devices.</p>
+					</div>
+        </div><!-- end col -->
 
 
+        <div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-applications"></i>
+						</div>
+						<h2>App Development</h2>
+						<p>As a guy experienced with Android/IOS development, I can help you create, publish and maintain the perfect app for your business.</p>
+					</div>
+                </div><!-- end col -->
 
 
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-video-edition"></i>
+						</div>
+						<h2>Video Production</h2>
+						<p>As a film lover, I've developed an eye for detail and storytelling. I'm sure I would be able to help you make a kick ass video.</p>
+					</div>
+                </div><!-- end col -->
+
+        <div class="col-md-4">
+                    <div class="services-inner-box">
+            <div class="ser-icon">
+              <i class="flaticon-design-thinking"></i>
+            </div>
+            <h2>Creative Design</h2>
+            <p>I like to make things look nice and I've got a bunch of ideas on how to make that happen. Experienced in Photoshop, Illustrator and Blender.</p>
+          </div>
+                </div><!-- end col -->
 
 
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-computer-1"></i>
+						</div>
+						<h2>Graphic Design</h2>
+						<p>Need help making icons, banners, logos or profiles? Well you're in luck, I'm pretty sure I can help you out with that as well.</p>
+					</div>
+                </div><!-- end col -->
 
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
 
-<footer>Chris Gruca &copy; 2019</footer>
+	<div id="portfolio" class="section port">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Portfolio</h3>
+                <p>Here is a collection of things I've worked on in the past.</p>
+            </div><!-- end title -->
 
-</main>
+			<div class="gallery-menu row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group text-left">
+						<button class="active" data-filter="*">All</button>
+						<button data-filter=".gal_a">Web Development</button>
+						<button data-filter=".gal_b">App Development</button>
+						<button data-filter=".gal_c">Video Production</button>
+					</div>
+				</div>
+			</div>
 
-<script  src="js/index.js"></script>
+			<div class="gallery-list row">
+      <div class="col-md-4 col-sm-6 gallery-grid gal_b">
+        <div class="gallery-single fix">
+          <img src="uploads/gallery_spring_app.jpg" class="img-fluid" alt="Image">
+          <div class="img-overlay">
+            <a href="https://maphealth.ca/problem-gambling-complex/" target="_blank" class="hoverbutton global-radius"><i class="fa fa-external-link"></i></a>
+          </div>
+        </div>
+      </div>
+
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_cdpg_video.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="http://www.youtube.com/watch?v=I8NoApdpx-s" data-rel="prettyPhoto" class="hoverbutton global-radius"><i class="fa fa-video-camera"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_woofsup_web.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="uploads/gallery_woofsup_info.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_semanticror_web.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="https://webdev2018.herokuapp.com/" target="_blank" class="hoverbutton global-radius"><i class="fa fa-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+
+  				<div class="col-md-4 col-sm-6 gallery-grid gal_c">
+  					<div class="gallery-single fix">
+  						<img src="uploads/gallery_esports_video.jpg" class="img-fluid" alt="Image">
+  						<div class="img-overlay">
+  							<a href="http://www.youtube.com/watch?v=S6a67MAi73E" data-rel="prettyPhoto" class="hoverbutton global-radius"><i class="fa fa-video-camera"></i></a>
+  						</div>
+  					</div>
+  				</div>
+
+            <div class="col-md-4 col-sm-6 gallery-grid gal_c">
+              <div class="gallery-single fix">
+                <img src="uploads/gallery_marchbreak_video.jpg" class="img-fluid" alt="Image">
+                <div class="img-overlay">
+                  <a href="http://www.youtube.com/watch?v=5SX2gXeklXw" data-rel="prettyPhoto" class="hoverbutton global-radius"><i class="fa fa-video-camera"></i></a>
+                </div>
+              </div>
+            </div>
+
+				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_c">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_junglebreak_app.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="https://chrisgruca.wixsite.com/chrisgruca/jungle-break" target="_blank" class="hoverbutton global-radius"><i class="fa fa-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+
+        <div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_hoppertown_web.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="https://www.hoppertown.com/" target="_blank" class="hoverbutton global-radius"><i class="fa fa-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+
+        <div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_annagruca_web.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="https://www.annagruca.com/" target="_blank" class="hoverbutton global-radius"><i class="fa fa-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+
+        <div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div class="gallery-single fix">
+						<img src="uploads/gallery_weather_web.jpg" class="img-fluid" alt="Image">
+						<div class="img-overlay">
+							<a href="demos/weather_demo/index.html" target="_blank" class="hoverbutton global-radius"><i class="fa fa-external-link"></i></a>
+						</div>
+					</div>
+				</div>
+
+        <div class="col-md-4 col-sm-6 gallery-grid gal_c">
+          <div class="gallery-single fix">
+            <img src="uploads/gallery_minecraft_video.jpg" class="img-fluid" alt="Image">
+            <div class="img-overlay">
+              <a href="http://www.youtube.com/watch?v=AM22CyBaTCQ" data-rel="prettyPhoto" class="hoverbutton global-radius"><i class="fa fa-video-camera"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 gallery-grid gal_b gal_c">
+          <div class="gallery-single fix">
+            <img src="uploads/gallery_galactic_app.jpg" class="img-fluid" alt="Image">
+            <div class="img-overlay">
+              <a href="http://www.youtube.com/watch?v=PPT6c7PBGJ0" data-rel="prettyPhoto" class="hoverbutton global-radius"><i class="fa fa-video-camera"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 gallery-grid gal_a">
+          <div class="gallery-single fix">
+            <img src="uploads/gallery_geocoding_web.jpg" class="img-fluid" alt="Image">
+            <div class="img-overlay">
+              <a href="demos/map_demo/index.html" target="_blank" class="hoverbutton global-radius"><i class="fa fa-external-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+			</div>
+			</div>
+		</div>
+	</div>
+
+  <div id="contact" class="section db">
+      <div class="container">
+          <div class="section-title text-left">
+              <h3>Contact</h3>
+              <p>I'm always looking for a new challenge, so if you need someone experienced in programming, app/web development or video production, then definitely get in touch with me. I can be reached at chris(dot)gruca(at)gmail.com. You can also just use the form below. Cheers!</p>
+          </div><!-- end title -->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contact_form">
+          <div id="message"></div>
+
+          <form id="fs-frm" name="contactFormPortfolio" action="https://formspree.io/f/mbjqrkeo" method="post">
+            <fieldset id="fs-frm-inputs">
+            <div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input class="form-control" name="name" type="text" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name.">
+									<p class="help-block text-danger"></p>
+								</div>
+								<div class="form-group">
+									<input class="form-control" name="_replyto" type="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Email entered is invalid')" oninput="this.setCustomValidity('')">
+									<p class="help-block text-danger"></p>
+								</div>
+								<div class="form-group">
+									<input class="form-control" name="phone" type="tel" placeholder="Your Phone">
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<textarea class="form-control" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter a message."></textarea>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+							<div class="clearfix"></div>
+							<div class="col-lg-12 text-center">
+                <span>Form processing/validation handled by Formspree.io<br></br></span>
+								<div id="success"></div>
+								<input type="submit" class="sim-btn btn-hover-new" value="Send Message">
+							</div>
+						</div>
+					</form>
+                  </div>
+              </div><!-- end col -->
+          </div><!-- end row -->
+      </div><!-- end container -->
+  </div><!-- end section -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">All Rights Reserved. &copy; Chris Gruca 2021. Modified <a href="https://html.design/">html design</a> template</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+	<!-- Camera Slider -->
+	<script src="js/jquery.mobile.customized.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/parallaxie.js"></script>
+	<script src="js/headline.js"></script>
+	<!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.vide.js"></script>
 
 </body>
-
 </html>
