@@ -22,7 +22,6 @@
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
-
 body {
     color: #666;
     font-size: 14px;
@@ -1341,7 +1340,6 @@ hr.invis1 {
 }
 
 .filter-button-group{
-	border: 1px solid #e4e4e4;
 	border-radius: 0px;
 	margin: 10px 0px;
 	display: inline-block;
