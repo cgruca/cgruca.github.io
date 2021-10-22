@@ -2140,7 +2140,7 @@ select.mobile-device {
 /* Footer left */
 
 .footer-distributed .footer-left {
-    float: left;
+    text-align: center;
 }
 
 .footer-distributed .footer-links {
