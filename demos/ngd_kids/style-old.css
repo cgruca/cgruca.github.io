@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Imprima&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: 'hidden';
-  font-family: 'Imprima', sans-serif;
+  overflow-x: "hidden";
+  font-family: "Imprima", sans-serif;
   color: #505962;
 }
 
@@ -16,8 +15,50 @@ a.disabled {
   cursor: default;
 }
 
+.modal {
+  display: block; /* Show the modal */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  height: auto; /* Adjust height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  padding: 10px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; /* Center the modal horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+  position: relative; /* Position relative to place close button inside */
+  margin-top: 400px;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute; /* Position it inside the modal content */
+  right: 10px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .navbar {
-  background-color: rgba(255, 255, 255, 1) ;
+  background-color: rgba(255, 255, 255, 1);
   z-index: 99;
 }
 .navbar-brand img {
@@ -30,7 +71,7 @@ a.disabled {
 
 .navbar-nav > li > a {
   display: flex;
-  align-items: center;  
+  align-items: center;
   height: 80px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -49,25 +90,25 @@ a.disabled {
   top: 38%;
   width: 100%;
   color: white;
- }
+}
 
- .caption h1 {
-   font-size: 3rem;
-   font-weight: 400;
-   letter-spacing: .2rem;
-   text-shadow: .1rem .1rem .8rem black;
-   padding-bottom: 1rem;
- }
- .caption h3 {
+.caption h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  padding-bottom: 1rem;
+}
+.caption h3 {
   font-size: 2rem;
-  text-shadow: .1rem .1rem .5rem black;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
   padding-bottom: 1.6rem;
 }
 .btn-lg {
   border-width: medium;
   border-radius: 0;
   font-size: 1.1rem;
-  padding: .6rem 1.3rem;
+  padding: 0.6rem 1.3rem;
   margin-top: 40px;
 }
 
@@ -76,11 +117,11 @@ a {
 }
 
 .waveAbs {
-    position: absolute;
-    bottom: -2px;
-    z-index: 5;
-    height: 100px;
-    width: 100%;
+  position: absolute;
+  bottom: -2px;
+  z-index: 5;
+  height: 100px;
+  width: 100%;
 }
 
 .waveRel {
@@ -98,7 +139,7 @@ section {
 h1.blueTitle {
   font-size: 2.8rem;
   font-weight: 600;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   color: #0a79c4;
   padding-bottom: 1rem;
 }
@@ -106,7 +147,7 @@ h1.blueTitle {
 h1.whiteTitle {
   font-size: 2.8rem;
   font-weight: 600;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   color: #ffffff;
   padding-bottom: 1rem;
 }
@@ -138,7 +179,7 @@ p.tulioText {
 .dark {
   background-image: url("dark_bg.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -149,7 +190,6 @@ p.tulioText {
 .dark-blue {
   background-color: #64aad9;
 }
-
 
 .btn-light {
   background-color: #0a79c4;
@@ -186,8 +226,8 @@ h6 a:hover {
 }
 
 .icon {
-  font-size:100px;
-  color:rgb(54, 54, 54);
+  font-size: 100px;
+  color: rgb(54, 54, 54);
 }
 
 .social:hover {
@@ -200,7 +240,6 @@ h6 a:hover {
   margin-top: 15px;
   color: rgb(32, 32, 32);
 }
-
 
 .social-subheading {
   padding-top: 5px;
@@ -220,21 +259,21 @@ h6 a:hover {
 }
 
 .hopper:hover {
-  -ms-animation:wiggle .3s 2;
-  -moz-animation:wiggle .3s 2;
-  -webkit-animation:wiggle .3s 2;
-  animation:wiggle .3s 2;
+  -ms-animation: wiggle 0.3s 2;
+  -moz-animation: wiggle 0.3s 2;
+  -webkit-animation: wiggle 0.3s 2;
+  animation: wiggle 0.3s 2;
 }
 
 .zoomIn img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .zoomIn img:hover {
-	-webkit-transform: scale(1.05);
-	transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .orders {
@@ -252,116 +291,112 @@ h6 a:hover {
 @media (max-width: 992px) {
   .caption h1 {
     font-size: 2.4rem;
-    letter-spacing: .15rem;
-    padding-bottom: .5rem;
+    letter-spacing: 0.15rem;
+    padding-bottom: 0.5rem;
   }
   .caption h3 {
     font-size: 1.5rem;
     line-height: 1.8rem;
     padding-bottom: 1.2rem;
- }
- .btn-lg {
+  }
+  .btn-lg {
     font-size: 1.3rem;
-    padding: .5rem 1rem;
- 
- }
- .col-md-8 h1 {
+    padding: 0.5rem 1rem;
+  }
+  .col-md-8 h1 {
     font-size: 1.7rem;
- }
- .image {
-   display:block;
-   margin-left: auto;
-   margin-right: auto;
-   padding-top: 20px;
- }
- h1.blueTitle {
-  text-align: center;
- }
- p {
-  text-align: center;
- }
+  }
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+  }
+  h1.blueTitle {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
 
- h1.whiteTitle {
-  text-align: center;
- }
- p.tulioText {
-  text-align: center;
- }
+  h1.whiteTitle {
+    text-align: center;
+  }
+  p.tulioText {
+    text-align: center;
+  }
 
- .tulioImage {
-  padding-top: 0;
-  margin-top: 0;
-}
+  .tulioImage {
+    padding-top: 0;
+    margin-top: 0;
+  }
 
-.contact {
-  text-align: left;
-}
+  .contact {
+    text-align: left;
+  }
 
-.icon {
-  text-align: center;
-}
-
+  .icon {
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
-
-.caption h1 {
+  .caption h1 {
     font-size: 1.8rem;
-    letter-spacing: .15rem;
-    padding-bottom: .5rem;
+    letter-spacing: 0.15rem;
+    padding-bottom: 0.5rem;
   }
   .caption h3 {
     font-size: 1.3rem;
     line-height: 1.8rem;
     padding-bottom: 1.2rem;
- }
- h1.blueTitle {
-  text-align: center;
-  font-size: 2rem;
- }
- p {
-  text-align: center;
-  font-size: 1.2rem;
- }
+  }
+  h1.blueTitle {
+    text-align: center;
+    font-size: 2rem;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
 
- h1.whiteTitle {
-  text-align: center;
-  font-size: 2rem;
- }
- p.tulioText {
-  text-align: center;
-  font-size: 1.2rem;
- }
+  h1.whiteTitle {
+    text-align: center;
+    font-size: 2rem;
+  }
+  p.tulioText {
+    text-align: center;
+    font-size: 1.2rem;
+  }
 
- .elongate {
-  min-height: 1250px;
+  .elongate {
+    min-height: 1250px;
+  }
+
+  .icon {
+    font-size: 60px;
+  }
+
+  .social-heading {
+    font-size: 1.2em;
+  }
+
+  .social-subheading {
+    font-size: 1em;
+  }
 }
 
-.icon {
-  font-size: 60px;
-}
-
-.social-heading {
-  font-size: 1.2em;
-}
-
-.social-subheading {
-  font-size: 1em;
-}
-
-}
-
- /*************************** Accordion *******************************/
- .acc .acc-item {
+/*************************** Accordion *******************************/
+.acc .acc-item {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.acc .acc-item button[aria-expanded='true'] {
+.acc .acc-item button[aria-expanded="true"] {
   border-bottom: 1px solid #0a79c4;
 }
 
 .acc .acc-item button::before {
-  content: '';
+  content: "";
   width: 14px;
   height: 2px;
   background: #333;
@@ -373,7 +408,7 @@ h6 a:hover {
 }
 
 .acc .acc-item button::after {
-  content: '';
+  content: "";
   width: 2px;
   height: 14px;
   background: #333;
@@ -384,12 +419,12 @@ h6 a:hover {
   transition: all 0.3s;
 }
 
-.acc .acc-item button[aria-expanded='true']::after {
+.acc .acc-item button[aria-expanded="true"]::after {
   transform: rotate(90deg) translateX(-1px);
 }
 
-.acc .acc-item button[aria-expanded='true']::before {
-  transform: rotate(180deg); 
+.acc .acc-item button[aria-expanded="true"]::before {
+  transform: rotate(180deg);
 }
 
 .acc button {
@@ -409,14 +444,14 @@ h6 a:hover {
 .acc button:hover,
 .acc button:focus {
   cursor: pointer;
-  color: #0a79c4;;
+  color: #0a79c4;
 }
 
 .acc button:hover::after,
 .acc button:focus::after {
   cursor: pointer;
-  color: #0a79c4;;
-  border: 1px solid #0a79c4;;
+  color: #0a79c4;
+  border: 1px solid #0a79c4;
 }
 
 .acc button .acc-title {
@@ -437,7 +472,7 @@ h6 a:hover {
 .acc button .icon::before {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 9px;
   left: 5px;
   width: 10px;
@@ -447,7 +482,7 @@ h6 a:hover {
 .acc button .icon::after {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 5px;
   left: 9px;
   width: 2px;
@@ -455,13 +490,13 @@ h6 a:hover {
   background: currentColor;
 }
 
-.acc button[aria-expanded='true'] {
-  color: #0a79c4;;
+.acc button[aria-expanded="true"] {
+  color: #0a79c4;
 }
-.acc button[aria-expanded='true'] .icon::after {
+.acc button[aria-expanded="true"] .icon::after {
   width: 0;
 }
-.acc button[aria-expanded='true'] + .acc-content {
+.acc button[aria-expanded="true"] + .acc-content {
   opacity: 1;
   max-height: 25em;
   transition: all 200ms linear;
@@ -504,9 +539,9 @@ h6 a:hover {
 #fs-frm label,
 #fs-frm legend,
 #fs-frm ::placeholder {
-  font-size: .825rem;
-  margin-bottom: .5rem;
-  padding-top: .2rem;
+  font-size: 0.825rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.2rem;
   display: flex;
   align-items: baseline;
 }
@@ -516,9 +551,9 @@ h6 a:hover {
 #fs-frm select,
 #fs-frm textarea,
 #fs-frm #card-element {
-  border: 1px solid rgba(0,0,0,0.2);
-  background-color: rgba(255,255,255,0.9);
-  padding: .75em 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75em 1rem;
   margin-bottom: 1.5rem;
 }
 #fs-frm input:focus,
@@ -572,7 +607,7 @@ h6 a:hover {
   appearance: checkbox;
   display: inline-block;
   width: auto;
-  margin: 0 .5em 0 0 !important;
+  margin: 0 0.5em 0 0 !important;
 }
 
 #fs-frm [type="radio"] {
@@ -583,7 +618,47 @@ h6 a:hover {
 
 /******************************** Animations *******************/
 
-@-ms-keyframes wiggle{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
-@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
-@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
-@keyframes wiggle{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}
+@-ms-keyframes wiggle {
+  0% {
+    -ms-transform: rotate(3deg);
+  }
+  50% {
+    -ms-transform: rotate(-3deg);
+  }
+  100% {
+    -ms-transform: rotate(3deg);
+  }
+}
+@-moz-keyframes wiggle {
+  0% {
+    -moz-transform: rotate(3deg);
+  }
+  50% {
+    -moz-transform: rotate(-3deg);
+  }
+  100% {
+    -moz-transform: rotate(3deg);
+  }
+}
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(3deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(3deg);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
