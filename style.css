@@ -354,6 +354,7 @@ a img.aligncenter {
   width: 100%;
 	text-align: center;
 }
+
 .main-banner::after {
     content: " ";
     position: absolute;
@@ -2003,6 +2004,13 @@ select.mobile-device {
 
 #contact {
     background: url(images/bg_purple.jpg) no-repeat center center #333333;
+    min-height: 500px; 
+
+    /* parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

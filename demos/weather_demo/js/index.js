@@ -119,6 +119,17 @@ checkbox.addEventListener( 'change', function() {
 });
 */
 
+window.addEventListener("load", (event) => {
+  defaultSetup();
+});
+
+//populate search field with default value
+function defaultSetup() {
+  searchInput.value = "Toronto";
+  fetchWeatherInfoMetric();
+  fetchForecastInfoMetric();
+}
+
 checkbox.addEventListener( 'change', function() {
     if(this.checked) {
       console.log("toggled");
