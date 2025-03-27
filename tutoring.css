@@ -19,6 +19,15 @@
 @import url(css/owl.carousel.css);
 @import url(css/font-awesome.min.css);
 
+@font-face {
+    font-family: GulfDisplay;
+    src: url(fonts/gulfs-display-normal.eot) format('embedded-opentype'), url('fonts/gulfs-display-normal.woff') format('woff'), url('fonts/gulfs-display-normal.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: Candice;
+    src: url(fonts/candice.eot) format('embedded-opentype'), url('fonts/candice.woff') format('woff');
+  }
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
@@ -27,10 +36,19 @@ body {
     font-size: 14px;
     font-family: 'Roboto Mono', monospace;
     line-height: 1.80857;
+    background-color: #6e43c4;
 }
 
 html, body{
 	height: 100%;
+}
+
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 body.demos .section {
@@ -82,13 +100,14 @@ h6 {
     position: relative;
     padding: 0 0 10px 0;
     font-weight: normal;
-    line-height: 120% !important;
+    /* line-height: 120% !important; */
     color: #333333;
     margin: 0
 }
 
 h1 {
-    font-size: 24px
+    font-size: 48px;
+    font-family: GulfDisplay;
 }
 
 h2 {
@@ -367,8 +386,12 @@ a img.aligncenter {
     opacity: .6;
 }
 
+.tutoring::after {
+    opacity: .3;
+}
+
 .heading{
-	color: #fc44cf;
+	color: #f9c900;
 	display: table-cell;
 	vertical-align: middle;
 	position: relative;
@@ -377,17 +400,29 @@ a img.aligncenter {
 }
 .heading h1{
 	color: #fff;
-	font-weight: 700;
-	font-size: 62px;
+	font-weight: 500;
+	font-size: 80px;
 	text-transform: uppercase;
 }
 .heading p{
-	font-size: 18px;
+	font-size: 26px;
 	padding: 20px 0px;
 }
 
 .heading h3{
 	color: fff;
+}
+
+.heading .yellow-header{
+	color: #f9c900;
+    font-size: 5rem;
+    font-family: Candice;
+    text-transform: none;
+}
+
+.heading .big-display{
+	color: #fff;
+    font-size: 7rem;
 }
 
 .cd-words-wrapper {
@@ -421,7 +456,7 @@ xclip
   display: inline-block;
   padding: .2em 0;
   color: #fff;
-  font-size: 30px;
+  font-size: 36px;
 }
 .cd-headline.clip span b{
 	text-transform: uppercase;
@@ -494,11 +529,11 @@ xclip
 }
 
 .section.srvs {
-    background-color: #dfd4f04a;
+    background-color: #dfd4f0;
 }
 
 .section.port {
-    background-color: #d2d8f68a;
+    background-color: #d2d8f6;
 }
 
 .section.db {
@@ -688,6 +723,23 @@ xclip
 	font-size: 22px;
 	font-weight: 600;
 }
+
+/*------------------------------------------------------------------
+    PRICING
+-------------------------------------------------------------------*/
+
+#pricing {
+    background-color: #533393;
+}
+
+#pricing h3 {
+	color: #ffffff;
+}
+
+#pricing .section-title p{
+	color: #ffffff;
+}
+
 
 
 /*------------------------------------------------------------------
@@ -2148,6 +2200,7 @@ select.mobile-device {
     text-align: left;
     padding: 30px 0px;
     overflow: hidden;
+    position: absolute;
 }
 
 
