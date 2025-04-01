@@ -2009,7 +2009,7 @@ select.mobile-device {
 }
 
 #contact {
-    background: url(images/bg_purple.jpg) no-repeat center center #333333;
+    background: url(images/bg_purple.jpg) no-repeat center center;
     min-height: 500px; 
 
     /* parallax */

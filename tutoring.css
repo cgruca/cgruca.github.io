@@ -361,6 +361,70 @@ a img.aligncenter {
 }
 
 /*------------------------------------------------------------------
+    SVG Animation
+-------------------------------------------------------------------*/
+
+@keyframes rotate {
+0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* outer most ring */
+.center4-topL {
+    animation: rotate 25s linear infinite;
+    transform-origin: -7px 7px;
+}
+.center3-topL {
+    animation: rotate 21s linear infinite;
+    transform-origin: -7px 7px;
+}
+.center2-topL {
+    animation: rotate 17s linear infinite;
+    transform-origin: -7px 7px;
+}
+.center1-topL {
+    animation: rotate 13s linear infinite;
+    transform-origin: -7px 7px;
+}
+/* ^ inner most ring */
+
+.center4-bottom {
+    animation: rotate 25s linear infinite;
+    transform-origin: 49px 106.6px;
+}
+.center3-bottom {
+    animation: rotate 21s linear infinite;
+    transform-origin: 49px 106.6px;
+}
+.center2-bottom {
+animation: rotate 17s linear infinite;
+transform-origin: 49px 106.6px;
+}
+.center1-bottom {
+    animation: rotate 13s linear infinite;
+    transform-origin: 49px 106.6px;
+}
+.center4-topR {
+animation: rotate 25s linear infinite;
+transform-origin: 107px 10.8px;
+}
+.center3-topR {
+    animation: rotate 21s linear infinite;
+    transform-origin: 107px 10.8px;
+}
+.center2-topR {
+    animation: rotate 17s linear infinite;
+    transform-origin: 107px 10.8px;
+}
+.center1-topR {
+    animation: rotate 13s linear infinite;
+    transform-origin: 107px 10.8px;
+}
+/*------------------------------------------------------------------
     SECTIONS
 -------------------------------------------------------------------*/
 .main-banner{
@@ -746,21 +810,11 @@ xclip
     FAQ
 -------------------------------------------------------------------*/
 
-/* #faq {
-    background-color: #533393;
-}
-*/
-
 #faq h4 {
     color: #632699d6;
     font-weight: bold;
     font-size: 20px;
 }
-
-
-
-
-
 
 /*------------------------------------------------------------------
     PORTFOLIO
@@ -2081,7 +2135,7 @@ select.mobile-device {
 }
 
 #contact {
-    background: url(images/bg_purple.jpg) no-repeat center center #333333;
+    background: url(images/bg_purple.jpg) no-repeat center center;
     min-height: 500px; 
 
     /* parallax */
